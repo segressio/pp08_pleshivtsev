@@ -1,0 +1,731 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+}
+.close {
+  display: none !important;
+  opacity: 0 !important;
+}
+.cart-button {
+  position: fixed;
+  transform: translate(0px, -50%);
+  top: 50%;
+  left: 15px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid black;
+  z-index: 1000;
+}
+.cart-button:hover {
+  cursor: pointer;
+}
+.cart-button img {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+.cart {
+  box-shadow: 0 0 15px black;
+  position: fixed;
+  transform: translate(0px, -50%);
+  display: flex;
+  z-index: 1000;
+  top: 50%;
+  padding-bottom: 15px;
+  width: 300px;
+  background: #5f616f;
+  flex-direction: column;
+}
+.cart:hover {
+  cursor: pointer;
+}
+.cart .cart-icon {
+  justify-content: space-evenly;
+  border-right: 6px solid #8aa3ea;
+  border-left: 6px solid #8aa3ea;
+  border-bottom: 8px solid #8aa3ea;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart .cart-icon .cart-close {
+  font-size: 28px;
+}
+.cart .cart-icon img {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+.cart .cart-catalog {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cart .cart-catalog .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.cart .cart-catalog .item img {
+  height: 50px;
+  width: 50px;
+}
+.cart .cart-catalog .item .delete {
+  color: black;
+  font-size: 16px;
+}
+.cart .cart-confirm {
+  background: #004b80;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 15px;
+  text-align: center;
+  padding: 4px;
+  color: white;
+}
+.open {
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) !important;
+}
+.popup-call {
+  opacity: 0;
+  transition-property: transform,opacity;
+  transition-duration: 0.5s;
+  transform: translate(-500%, -50%);
+  z-index: 100;
+  background: #cfe1ff;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  flex-direction: column;
+  left: 50%;
+  position: fixed;
+  box-shadow: 0 0 30px black;
+}
+.popup-call fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup-call fieldset legend {
+  margin-bottom: 5px;
+  background: #ffc800;
+  border-radius: 10px;
+}
+.popup-call fieldset label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.popup-call fieldset label input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 3px;
+}
+.popup-call fieldset button {
+  width: 100px;
+  margin: 0 auto;
+  background: #7fa3e4;
+  font-size: 16px;
+  margin-top: 10px;
+}
+header {
+  padding: 0px 50px;
+  height: 185px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo img {
+  width: 135px;
+  height: 150px;
+}
+.logo .container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.logo .container .logo-name {
+  font-family: "molot";
+  font-size: 60px;
+  color: #0600bc;
+}
+.logo .container .logo-description {
+  font-size: 16px;
+  font-family: arial;
+}
+.client-manage {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+}
+.client-manage .phone-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.client-manage .phone-block img {
+  height: 85px;
+  width: 85px;
+}
+.client-manage .phone-block .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.client-manage .phone-block .container .phone-number {
+  font-weight: bold;
+  font-family: arial;
+  font-size: 24px;
+}
+.client-manage .phone-block .container .phone-description {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.client-manage .buttons {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.client-manage .buttons .order-button {
+  transition-property: border,color,background;
+  transition-duration: 0.3s;
+  border: 1px solid black;
+  height: 40px;
+  width: 160px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-family: arial;
+  background: #e6e6e6;
+  padding: 5px;
+  white-space: pre;
+}
+.client-manage .buttons .order-button:hover {
+  color: #2f26a9;
+  border: 1px solid gray;
+  background: white;
+  cursor: pointer;
+}
+nav {
+  margin: 0px;
+  background: #707070;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav .buttons .menu-btn {
+  text-decoration: none;
+  text-align: center;
+  margin: 0px 20px;
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid black;
+  color: white;
+  font-size: 18px;
+  line-height: 50px;
+  font-family: sans-serif;
+  transition-property: border, height, color, line-height;
+  transition-duration: 0.3s;
+  white-space: nowrap;
+  margin-bottom: 5px !important;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .buttons .menu-btn img {
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+}
+nav .buttons .menu-btn:hover {
+  height: 42px;
+  border: 1px solid #2f26a9;
+  line-height: 42px;
+  color: #2f26a9;
+  cursor: pointer;
+}
+.slider {
+  position: relative;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.slider img {
+  max-width: 100%;
+  height: 100%;
+}
+.slider .arrow {
+  position: absolute;
+  height: 100%;
+  left: 0px;
+}
+.slider .arrow:nth-child(2) {
+  left: unset;
+  right: 0px;
+}
+.slider .arrow:nth-child(2) img {
+  transform: rotate(0deg) scale(0.34);
+}
+.slider .arrow img {
+  height: 100%;
+  transform: rotate(180deg) scale(0.34);
+}
+.advantage-block {
+  margin-top: -5px;
+  height: 150px;
+  background: #e7e7e7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.advantage-block .advantage {
+  background: #cacaca;
+  height: 110px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  font-family: arial;
+  align-items: center;
+  box-shadow: 0 0 5px black;
+}
+.advantage-block .advantage img {
+  height: 85px;
+  width: 105px;
+}
+.advantage-block .advantage .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.advantage-block .advantage .text .header {
+  color: #2f26a9;
+  font-size: 24px;
+}
+.advantage-block .advantage .text .description {
+  font-size: 16px;
+  font-family: arial;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  width: 80%;
+  margin-left: 10%;
+}
+main .catalog {
+  width: 300px;
+}
+main .catalog .catalog-section ul {
+  list-style-image: url(images/круг.png);
+}
+main .catalog .catalog-section ul li {
+  font-family: arial;
+  font-size: 18px;
+  height: 24px;
+  transition-property: color;
+  transition-duration: 0.2s;
+  color: gray;
+}
+main .catalog .catalog-section ul li:hover {
+  border-bottom: 1px solid #2f26a9;
+  height: 23px;
+  color: #2f26a9;
+}
+main .catalog .catalog-section ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  white-space: nowrap;
+}
+main .catalog .catalog-section .header {
+  font-family: "molot";
+  font-size: 24px;
+  color: #2f26a9;
+  text-align: center;
+  display: block;
+}
+main .catalog .catalog-section .header:after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: #2f26a9;
+}
+main .sell-block {
+  width: 100%;
+  background: #e5e2e2;
+  min-height: 300px;
+  margin-left: 75px;
+  box-shadow: 0 0 5px black;
+  margin-bottom: 20px;
+}
+main .sell-block article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: arial;
+}
+main .sell-block article h1 {
+  color: #2f26a9;
+  font-size: 28px;
+  transform: skew(-15deg);
+  border: 2px solid #2f26a9;
+  padding: 2px;
+}
+main .sell-block article p {
+  color: #2f26a9;
+  font-size: 18px;
+  padding: 0 20px;
+  text-align: center;
+  display: block;
+}
+main .sell-block article h2 {
+  color: orange;
+}
+main .sell-block article h2 img {
+  height: 25px;
+  width: 25px;
+}
+main .news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin-left: 10%;
+  margin-top: -50px;
+}
+main .news h1 {
+  color: #2f26a9;
+}
+main .news .news-item {
+  margin-bottom: 15px;
+  background: #b4d2ea;
+  padding: 15px;
+  max-height: 150px;
+}
+main .news .news-item img {
+  max-height: 75px;
+}
+main .news .news-item h2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px;
+  margin: 0px 20px;
+}
+main .news .news-item p {
+  margin-top: 0px;
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: clip;
+}
+main .uslugs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+main .uslugs .item {
+  background: #c4dff3;
+  width: 28%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+main .uslugs .item img {
+  border: 2px solid orange;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+}
+main .uslugs .item span {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  color: #2f26a9;
+}
+main .uslugs .item p {
+  max-height: 100px;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  color: black;
+}
+main .items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+main .items .item {
+  transition-property: outline;
+  transition-duration: 0.2s;
+  width: 24%;
+  margin-bottom: 20px;
+  background: #8aa3ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .items .item:hover {
+  outline: 3px solid #2f26a9;
+}
+main .items .item:hover img {
+  animation: items-animation 0.5s linear;
+  animation-fill-mode: forwards;
+}
+main .items .item img {
+  width: 125px;
+}
+main .items .item span {
+  font-family: "molot";
+  font-size: 18px;
+  text-align: center;
+  display: block;
+}
+footer {
+  background: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer ul {
+  margin-right: 20px;
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 5px;
+  transition-property: outline;
+  transition-duration: 0.3s;
+}
+footer ul li:hover {
+  outline: 1px solid #2f26a9;
+}
+footer ul li:hover a {
+  color: white;
+}
+footer ul li a {
+  transition-property: color;
+  transition-duration: 0.3s;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: arial;
+  color: #2f26a9;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+footer .map {
+  border: 1px solid black;
+  margin-left: 20px;
+}
+footer .contacts {
+  margin-left: 20px;
+}
+footer .contacts span {
+  font-size: 24px;
+  color: #2f26a9;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: arial;
+}
+footer .contacts p {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  font-family: arial;
+  text-align: center;
+  display: block;
+  margin: 0px;
+}
+.page-text {
+  width: 80%;
+  background: #f3f3f3;
+  margin-left: 10%;
+  box-shadow: 0 0 10px grey;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+.page-text h2 {
+  text-align: center;
+  color: #2f26a9;
+}
+.page-text p {
+  padding: 5px 20px;
+  text-align: justify;
+}
+.page-text b {
+  font-style: italic;
+}
+.page-text .image-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.page-text .image-block img {
+  object-fit: contain;
+  max-height: 150px;
+}
+@media (max-width: 1280px) {
+  nav .buttons {
+    padding: 5px 0px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .buttons .menu-btn {
+    margin-bottom: 5px !important;
+    width: 15%;
+  }
+  main {
+    width: 90% !important;
+    margin-left: 5% !important;
+  }
+  main .catalog .catalog-section ul li {
+    padding: 5px 0px;
+  }
+  main .catalog .catalog-section ul li a {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column !important;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  header .client-manage {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  header .client-manage .buttons {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  header .client-manage .buttons .order-button {
+    margin-right: 15px !important;
+  }
+  .advantage-block {
+    height: auto !important;
+    flex-wrap: wrap;
+  }
+  .advantage-block .advantage {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .advantage-block .advantage .text span {
+    font-size: 20px !important;
+  }
+  main {
+    width: 100% !important;
+    margin-left: 0px;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  main .sell-block {
+    margin-left: 0px !important;
+    margin-top: 30px;
+  }
+  main .catalog {
+    width: 90% !important;
+  }
+  main .catalog section span {
+    font-size: 26px !important;
+  }
+  main .catalog section ul {
+    text-align: center;
+    list-style: none;
+  }
+  main .catalog section ul li a {
+    font-size: 24px !important;
+  }
+  nav .buttons {
+    flex-direction: column !important;
+  }
+  nav .buttons .menu-btn {
+    width: 80% !important;
+  }
+  nav .buttons .menu-btn:hover {
+    height: 50px !important;
+    line-height: 2px solid #2f26a9;
+    font-weight: bold;
+  }
+  footer .map {
+    order: 1;
+  }
+  footer ul li a {
+    font-size: 24px !important;
+  }
+  footer .contacts span {
+    font-size: 28px!important;
+  }
+  footer .contacts p {
+    font-size: 24px !important;
+  }
+}
+@font-face {
+  font-family: "molot";
+  src: url(fonts.molot.otf?);
+}
+@keyframes items-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(45deg);
+  }
+  40% {
+    transform: rotate(25deg);
+    transform: scale(1.02);
+  }
+  80% {
+    transform: rotate(10deg);
+    transform: scale(1.05);
+  }
+  to {
+    transform: rotate(0deg);
+    transform: scale(1.1);
+  }
+}
